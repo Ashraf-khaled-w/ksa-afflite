@@ -18,7 +18,7 @@ let router = createBrowserRouter([
     {path:'تواصل-معنا',element:<Contact/>},
   ]},
   
-] , {basename:'/ksa-afflite/'}) // This is the base URL for the app, change it to your desired path)
+] ,
 
 
 function App() {
