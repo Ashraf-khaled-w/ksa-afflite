@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import Animation from "../../components/ui/Animation/Animation";
 
-
 const P = styled.p`
   font-size: 25px;
   font-weight: 400;
@@ -47,45 +46,50 @@ function About() {
 
   return (
     <>
-      <div className="bg-[#911938] py-6">
-      <Animation>
-      <div className=" flex flex-col lg:flex-row md:flex-row sm:flex-col-reverse justify-end items-start px-5 text-center py-10">
-        <div className="flex items-center justify-center my-auto">
-          <img src={img} alt="mobileTag" width={"45%"} height={"65%"} className="flex items-center justify-center"/>
-        </div>
-        <div
-          // ref={ref}
-          dir="rtl"
-          className=
-          {` text-white text-center items-center md:text-start flex flex-col justify-center md:items-start md-items-end my-auto`}
-        >
-          <h2 className="text-5xl   font-bold py-5">المصطفى كلين</h2>
-          <P>
-            <H4>نحن </H4>
-            من أعرق وأكبر شركات تقدم خدمات التنظيف العام و مكافحة الحشرات ونسعى دائمًا للتميز
-            والإتقان والإحترافية ,
-          </P>
-          <P>
-            <H4>نتخصص </H4>
-            في مكافحة الحشرات والتخلص من القوارض والنمل الأبيض والبق والتخلص من الآفات الضارة{" "}
-          </P>
-          <P>
-            <H4>أسعارنا </H4>
-            مميزة للغاية مقارنة بجودة خدماتنا بالإضافة نحن مؤسسة رسمية تعمل تحت طائلة القانون{" "}
-          </P>
-          <P>
-            فروعنا
-            <H4>
-              ( الدمام - الخبر - القطيف - الظهران - تاروت - عنك - سيهات - صفوي - رأس تنورة -
-              الخفجي - غزلان ​){" "}
-            </H4>
-          </P>
-        </div>
-        </div>  
+      <div className="bg-[#911938] py-6 px-6 lg:py-10 lg:px-10 md:py-10 md:px-10">
+        <Animation>
+          <div className=" flex flex-col lg:flex-row md:flex-row sm:flex-col-reverse justify-end items-start px-5 text-center py-10">
+            <div className="flex items-center justify-center my-auto">
+              <img
+                src={img}
+                alt="mobileTag"
+                width={"45%"}
+                height={"65%"}
+                className="flex items-center justify-center"
+              />
+            </div>
+            <div
+              // ref={ref}
+              dir="rtl"
+              className={` text-white text-center items-center md:text-start flex flex-col justify-center md:items-start md-items-end my-auto`}
+            >
+              <h2 className="text-5xl   font-bold py-5">المصطفى كلين</h2>
+              <P>
+                <H4>نحن </H4>
+                من أعرق وأكبر شركات تقدم خدمات التنظيف العام و مكافحة الحشرات ونسعى دائمًا
+                للتميز والإتقان والإحترافية ,
+              </P>
+              <P>
+                <H4>نتخصص </H4>
+                في مكافحة الحشرات والتخلص من القوارض والنمل الأبيض والبق والتخلص من الآفات
+                الضارة{" "}
+              </P>
+              <P>
+                <H4>أسعارنا </H4>
+                مميزة للغاية مقارنة بجودة خدماتنا بالإضافة نحن مؤسسة رسمية تعمل تحت طائلة
+                القانون{" "}
+              </P>
+              <P>
+                فروعنا
+                <H4>
+                  ( الدمام - الخبر - القطيف - الظهران - تاروت - عنك - سيهات - صفوي - رأس تنورة
+                  - الخفجي - غزلان ​){" "}
+                </H4>
+              </P>
+            </div>
+          </div>
         </Animation>
       </div>
-      
-      
     </>
   );
 }
