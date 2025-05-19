@@ -56,7 +56,7 @@ function Contact() {
 
     return (
       <>
-        <div className="bg-[#911938]  justify-end items-start px-5 text-center py-5 pt-24">
+        <div className="bg-[#911938] min-h-screen justify-end items-start px-5 text-center py-5 pt-24">
           <h1
             className={`${styles.serviveHead} text-[40px] font-medium py-7 text-white text-center`}
           >
