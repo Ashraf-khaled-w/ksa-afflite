@@ -159,7 +159,7 @@ function Contact() {
               className="bg-[#FFCA00] w-[90%] md:w-[55%] py-3 rounded-lg hover:cursor-pointer"
               disabled={isSubmitting}
             >
-              {isSubmitting ? '…جاري الإرسال' : '  - وإترك رقم الهاتف والخدمة المراد تنظيفها وسوف نقوم بالتواصل معك مباشرةإضغط هنا…'}
+              {isSubmitting ? '…جاري الإرسال' : '  - ....وإترك رقم الهاتف والخدمة المراد تنظيفها وسوف نقوم بالتواصل معك مباشرةإضغط هنا'}
             </button>
 
             </form>
