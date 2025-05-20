@@ -34,31 +34,28 @@ function Contact() {
     initialValues:{
     userName:'',
     email:'',
-    details:'',
-    phoneNumber:''
+    phoneNumber:'',
+    details:''
     }, 
     validationSchema: validationSchema ,
     onSubmit:handleSendOrder
    })
 
-   async function handleSendOrder(formsData, { resetForm }){
+   async function handleSendOrder(values, { resetForm }) {
     setIsSubmitting(true);
-    await axios.post('https://send-email-iomfc97js-hadeerabdelgawads-projects.vercel.app/api/order', formsData)
-    .then((response)=>{
-        console.log(response);
-        toast.success('تم إرسال طلبك بنجاح')
-        formikHelpers.resetForm();
-        setIsSubmitting(false)
-        
-
-    }).catch((error)=>{
-        console.error('خطأ أثناء الإرسال:', error)
-        toast.error('حدث خطأ أثناء الإرسال')
-        setIsSubmitting(false)
+    try {
+      const response = await axios.post('https://send-email-iomfc97js-hadeerabdelgawads-projects.vercel.app/api/order', values);
+      console.log(response);
+      toast.success('تم إرسال طلبك بنجاح');
+      resetForm();
+    } catch (error) {
+      console.error('خطأ أثناء الإرسال:', error);
+      toast.error('حدث خطأ أثناء الإرسال');
+    } finally {
+      setIsSubmitting(false);
     }
-    
-    )
-   }
+  }
+  
 
     return (
       <>
