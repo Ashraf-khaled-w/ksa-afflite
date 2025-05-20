@@ -44,7 +44,7 @@ function Contact() {
    async function handleSendOrder(values, { resetForm }) {
     setIsSubmitting(true);
     try {
-      const response = await axios.post('https://send-email-iomfc97js-hadeerabdelgawads-projects.vercel.app/api/order', values);
+      const response = await axios.post('https://send-email-d45p4do76-hadeerabdelgawads-projects.vercel.app/api/order', values);
       console.log(response);
       toast.success('تم إرسال طلبك بنجاح');
       resetForm();
