@@ -25,7 +25,7 @@ function Contact() {
         userName: Yup.string().required('name is required'),
         email: Yup.string().required('email is required').email('enter valid email'),  //check on email
         phoneNumber: Yup.string().required('phone is required').matches(/^01[1250][0-9]{8}$/ , 'phone is not valid'),
-        order: Yup.string().required('order is required'),
+        details: Yup.string().required('order is required'),
     
       })
     
@@ -33,7 +33,7 @@ function Contact() {
     initialValues:{
     userName:'',
     email:'',
-    order:'',
+    details:'',
     phoneNumber:''
     }, 
     validationSchema: validationSchema ,
@@ -41,7 +41,7 @@ function Contact() {
    })
 
    async function handleSendOrder(formsData, { resetForm }){
-    await axios.post('https://test-sandy-mu.vercel.app/api/order', formsData)
+    await axios.post('https://send-email-j6snhq93v-hadeerabdelgawads-projects.vercel.app/api/order', formsData)
     .then((response)=>{
         console.log(response);
         toast.success('تم إرسال طلبك بنجاح')
@@ -133,19 +133,19 @@ function Contact() {
               )}
 
               <textarea
-                id="order"
+                id="details"
                 placeholder="إترك طلبك"
                 dir="rtl"
                 rows={"6"}
-                name="order"
+                name="details"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                value={formik.values.order}
+                value={formik.values.details}
                 className="p-2 bg-white rounded-lg w-[90%]  md:w-[55%] block mx-auto my-5"
               ></textarea>
 
-              {formik.touched.order && formik.errors.order && (
-                <p className="text-red-500 text-sm">{formik.errors.order}</p>
+              {formik.touched.details && formik.errors.details && (
+                <p className="text-red-500 text-sm">{formik.errors.details}</p>
               )}
 
               <button
