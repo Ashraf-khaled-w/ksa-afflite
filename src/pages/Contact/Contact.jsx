@@ -17,7 +17,8 @@ display:block;
 
 `
 function Contact() {
-    const from= useRef()
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
 
     
 
@@ -148,13 +149,14 @@ function Contact() {
                 <p className="text-red-500 text-sm">{formik.errors.details}</p>
               )}
 
+
               <button
                 type="submit"
                 className="bg-[#FFCA00] w-[90%]  md:w-[55%] py-3 rounded-lg hover:cursor-pointer"
-              >
-                إضغط هنا - وإترك رقم الهاتف والخدمة المراد تنظيفها وسوف نقوم بالتواصل معك
-                مباشرة
-              </button>
+                 disabled={isSubmitting} onClick={() => setIsSubmitting(true)} >
+              {isSubmitting ? 'جاري الإرسال…' : 
+              '  - وإترك رقم الهاتف والخدمة المراد تنظيفها وسوف نقوم بالتواصل معك مباشرةإضغط هنا…'}
+            </button>
             </form>
           </div>
         </div>
