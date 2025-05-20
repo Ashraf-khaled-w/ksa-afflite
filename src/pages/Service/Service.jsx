@@ -9,15 +9,14 @@ import Img5 from "../../assets/imgs/service/5.jpg";
 import Img6 from "../../assets/imgs/service/6.jpg";
 import Animation from "../../components/ui/Animation/Animation";
 
-
 function Service({ className = "", color = "white", colorAfter = "rgb(255,202,0)", ...rest }) {
   return (
     <div
       className={`pt-[5rem] min-h-screen bg-[rgb(145,25,56)] text-center flex flex-col justify-center items-center text-${color} font-bold ${className}`}
       {...rest}
     >
-      <Animation>
-        <div className="p-4 w-[80%]">
+      <div className="p-4 w-[80%]">
+        <Animation>
           <h2
             className={`
               text-5xl font-bold mb-12 relative pb-2
@@ -52,8 +51,8 @@ function Service({ className = "", color = "white", colorAfter = "rgb(255,202,0)
               الفراش والنمل الأبيض والصراصير
             </p>
           </div>
-        </div>
-      </Animation>
+        </Animation>
+      </div>
     </div>
   );
 }
