@@ -43,7 +43,7 @@ function Contact() {
 
    async function handleSendOrder(formsData, { resetForm }){
     setIsSubmitting(true);
-    await axios.post('http://localhost:3000/api/order', formsData)
+    await axios.post('https://send-email-iomfc97js-hadeerabdelgawads-projects.vercel.app/api/order', formsData)
     .then((response)=>{
         console.log(response);
         toast.success('تم إرسال طلبك بنجاح')
