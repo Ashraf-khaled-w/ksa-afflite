@@ -41,7 +41,7 @@ function Contact() {
    })
 
    async function handleSendOrder(formsData, { resetForm }){
-    await axios.post('https://send-email-g7rl07u5m-hadeerabdelgawads-projects.vercel.app/api/order', formsData)
+    await axios.post('https://send-email-63740zqt9-hadeerabdelgawads-projects.vercel.app/api/order', formsData)
     .then((response)=>{
         console.log(response);
         toast.success('تم إرسال طلبك بنجاح')
