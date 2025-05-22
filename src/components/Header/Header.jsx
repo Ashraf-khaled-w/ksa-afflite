@@ -23,19 +23,7 @@ function Header({ className, ...rest }) {
             والصراصير والبق والقوارض ورش المبيدات وتعقيم المنازل والمدارس والمساجد
           </p>
         </div>
-        <div className="buttons">
-          <a href="https://wa.me/966571004734"
-           target="_blank"
-           rel="noreferrer">
-            <Button>05927272923</Button>
-          </a>
-          <a href="https://wa.me/966571004734"
-           target="_blank"
-           rel="noreferrer">
-            <Button>عقود سنوية لمكافحة الحشرات</Button>
-          </a>
-          
-        </div>
+        
         
       </div>
       </Animation>
