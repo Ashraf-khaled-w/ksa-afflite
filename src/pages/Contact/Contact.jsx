@@ -25,7 +25,7 @@ function Contact() {
     let validationSchema = Yup.object({
         userName: Yup.string().required('name is required'),
         email: Yup.string().required('email is required').email('enter valid email'),  //check on email
-        phoneNumber: Yup.string().required('phone is required').matches(/^01[1250][0-9]{8}$/ , 'phone is not valid'),
+        phoneNumber: Yup.string().required('phone is required'),
         details: Yup.string().required('order is required'),
     
       })

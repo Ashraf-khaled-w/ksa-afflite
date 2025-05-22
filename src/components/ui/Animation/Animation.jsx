@@ -5,9 +5,11 @@ import "aos/dist/aos.css";
 
 
 function Animation({className="",children, ...rest}) {
+
     useEffect(() => {
         AOS.init({ duration: 800 });
       }, []);
+      
     return <>
         {/* <motion.div
             initial={{ opacity: 0, y: 50 }}
