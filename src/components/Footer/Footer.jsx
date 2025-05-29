@@ -1,71 +1,56 @@
-import React from 'react'
-import styles from './Footer.module.css'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-
-const H3= styled.h3`
-    font-size:15px;
-    font-weight:400
-`
+import React from "react";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
 
-   
+  // Replace with your actual social media links
+  const socialLinks = [
+    {
+      name: "GitHub",
+      icon: "fa-brands fa-github",
+      url: "https://github.com/Ashraf-khaled-w",
+    },
+    {
+      name: "LinkedIn",
+      icon: "fa-brands fa-linkedin",
+      url: "https://www.linkedin.com/in/ashraf-khaled-663299293/",
+    },
+    {
+      name: "Whatsapp",
+      icon: "fab fa-whatsapp",
+      url: "https://wa.me/+201093856925",
+    },
 
-    return <>
-    <div className='flex flex-wrap flex-row lg:flex-row md:flex-col sm:flex-col gap-5 justify-center items-center  bg-[#1B262C] text-white p-5'>
-        <H3>
-            <Link to={'/تواصل-معنا'}>
-                للتواصل معنا
-            </Link>
-        </H3>
-        <H3>
-            <Link>
-            Pest control services
-            </Link>
-        </H3>
-        <H3>
-            <Link>
-            Getting rid of cockroaches and reptiles
-            </Link>
-        </H3>
-        <H3>
-            <Link>
-            Spraying pesticides
-            </Link>
-        </H3>
-        <H3>
-            <Link>
-            Control of rodents and bugs
-            </Link>
-        </H3>
-        <H3>
-            <Link to={'/خدماتنا'}>
-            Our Services
-            </Link>
-        </H3>
-        <H3>
-            <Link>
-            Termite control
-            </Link>
-        </H3>
-        <H3>
-            <Link to={'/تعرف-علينا'}>
-            تعرف علينا
-            </Link>
-        </H3>
-        <H3>
-            <Link>
-            الرئيسية
-            </Link>
-        </H3>
-        <H3>
-            حقوق النشر © 2025 جميع الحقوق محفوظة - تاج كلين لمكافحة الحشرات ورش المبيدات
-        </H3>
+    // Add more social links if needed
+  ];
 
-    </div>
-    
-    </>
+  return (
+    <footer className="bg-[rgb(27,38,44)] text-gray-400 py-2 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+        {/* Copyright */}
+        <div className="text-center md:text-left">
+          <p>&copy; {currentYear} Ashraf Khaled. All rights reserved.</p>
+          <p className="text-sm">Designed & Built by Ashraf Khaled</p>
+        </div>
+
+        {/* Social Media Links */}
+        <div className="flex space-x-6">
+          {socialLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Ashraf Khaled on ${link.name}`}
+              className="text-gray-400 hover:text-white transition-colors duration-300 text-2xl"
+            >
+              <i className={link.icon}></i>
+            </a>
+          ))}
+        </div>
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
