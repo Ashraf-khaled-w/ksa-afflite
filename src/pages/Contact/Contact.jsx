@@ -65,20 +65,20 @@ function Contact() {
         <div className="py-10">
           <p className="text-white text-lg font-medium">Al Khobar Saudi Arabia</p>
           <A
-            href="https://wa.me/+966571007434"
+            href="https://wa.me/+966571004734"
             target="_blank"
             rel="noreferrer"
             className=" hover:underline "
           >
-            +966-571007434 <i className="fa-solid fa-phone"></i>
+            +966-571004734 <i className="fa-solid fa-phone"></i>
           </A>
           <A
-            href="https://wa.me/966571007434"
+            href="https://wa.me/966571004734"
             target="_blank"
             rel="noreferrer"
             className="hover:underline"
           >
-            +966-571007434 <img src={whatsImg} alt="whatsImg" className="w-5 inline" />
+            +966-571004734 <img src={whatsImg} alt="whatsImg" className="w-5 inline" />
           </A>
           <p className="text-white text-lg font-medium">
             خدماتنا على مدار الـ 24 ساعة طوال 7 أيام الأسبوع{" "}
