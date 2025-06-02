@@ -24,10 +24,10 @@ let router = createBrowserRouter([
 function App() {
   return (
     <>
-      <ParallaxProvider>
+      {/* <ParallaxProvider>
         <RouterProvider router={router} />
         <Toaster />
-      </ParallaxProvider>
+      </ParallaxProvider> */}
     </>
   );
 }
